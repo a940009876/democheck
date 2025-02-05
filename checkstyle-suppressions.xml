@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE suppressions PUBLIC
+    "-//Puppy Crawl//DTD Suppressions 1.1//EN"
+    "http://checkstyle.sourceforge.net/dtds/suppressions_1_1.dtd">
+
+<suppressions>
+    <!-- Spring Boot Application files get detected as utility classes and checkstyle wants them to have a private constructor, but a constructor is required to run the application. By convention application classes end with *Application -->
+    <suppress checks="HideUtilityClassConstructor" files=".*Application.java"/>
+
+    <!-- Suppress Javadoc checks for test classes -->
+    <suppress checks="JavadocMethod" files=".*Test\.java" />
+</suppressions>
